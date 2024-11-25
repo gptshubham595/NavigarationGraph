@@ -7,17 +7,17 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import com.oops.navigarationgraph.databinding.FragmentTodo3Binding
+import com.oops.navigarationgraph.databinding.FragmentTodoBinding
 import com.oops.navigarationgraph.presentation.feature.viewmodels.MainViewModel
 import com.oops.navigarationgraph.presentation.feature.viewmodels.TodoViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class Todo3Fragment : Fragment() {
+class TodoFragment : Fragment() {
     private val viewModel: MainViewModel by activityViewModels()
     private val todoViewModel: TodoViewModel by viewModels()
 
-    private lateinit var binding: FragmentTodo3Binding
+    private lateinit var binding: FragmentTodoBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,7 +25,7 @@ class Todo3Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        binding = FragmentTodo3Binding.inflate(inflater)
+        binding = FragmentTodoBinding.inflate(inflater)
         return binding.root
     }
 

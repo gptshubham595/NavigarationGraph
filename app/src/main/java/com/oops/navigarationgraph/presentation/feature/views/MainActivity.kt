@@ -6,9 +6,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.oops.navigarationgraph.databinding.ActivityMainBinding
 import com.oops.navigarationgraph.presentation.feature.viewmodels.MainViewModel
-import com.oops.navigarationgraph.presentation.feature.views.fragments.Todo1Fragment
-import com.oops.navigarationgraph.presentation.feature.views.fragments.Todo2Fragment
-import com.oops.navigarationgraph.presentation.feature.views.fragments.Todo3Fragment
+import com.oops.navigarationgraph.presentation.feature.views.fragments.TodoFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -28,14 +26,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFragments() {
-        val todo1Fragment = Todo1Fragment()
-        val todo2Fragment = Todo2Fragment()
-        val todo3Fragment = Todo3Fragment()
-        val transactionManager = supportFragmentManager.beginTransaction()
-        transactionManager.add(binding.fragmentContainer.id, todo1Fragment)
-        transactionManager.add(binding.fragmentContainer.id, todo2Fragment)
-        transactionManager.add(binding.fragmentContainer.id, todo3Fragment)
-        transactionManager.addToBackStack("TODO_FRAGMENT")
-        transactionManager.commit()
+//        val todoFragment = TodoFragment()
+//        val transactionManager = supportFragmentManager.beginTransaction()
+//        transactionManager.add(binding.fragmentContainer.id, todoFragment)
+//        transactionManager.addToBackStack("TODO_FRAGMENT")
+//        transactionManager.commit()
     }
 }
